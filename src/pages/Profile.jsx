@@ -3,13 +3,13 @@ import { Header, About, Services, Skills, Footer } from "../components";
 
 const Profile = () => {
   return (
-    <>
+    <main>
       <Header />
       <About />
-      <Services />
       <Skills />
+      <Services />
       <Footer />
-    </>
+    </main>
   );
 };
 
