@@ -1,5 +1,5 @@
 import Header from "./Header";
-import About from "./about";
+import About from "./About";
 import Contact from "./Contact";
 import Services from "./Services";
 import Skills from "./Skills";
