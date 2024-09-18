@@ -11,10 +11,12 @@ const AppProvider = ({ children }) => {
   const [error, setError] = useState(false);
 
   const myRepos = async () => {
+    setLoading(true);
     const reponse = await axios(url).catch((err) => console.log(err));
     const data = reponse.data;
 
     setRepos(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -22,7 +24,9 @@ const AppProvider = ({ children }) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ repos }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ repos, loading }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 // make sure use

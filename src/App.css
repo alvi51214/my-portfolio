@@ -169,6 +169,9 @@ p {
     width: 95vw;
   }
 }
+.loading {
+  text-align: center;
+}
 
 /* navbar */
 .nav-links {
@@ -506,7 +509,7 @@ textarea {
 }
 /* projects */
 .project-img {
-  height: 20rem;
+  height: 15rem;
   object-fit: cover;
   width: 100%;
   border-top-left-radius: var(--radius);
@@ -521,11 +524,14 @@ textarea {
   border-radius: var(--radius);
   position: relative;
   perspective: 1500px;
-  height: 29rem;
+  min-height: 26rem;
   margin-bottom: 3rem;
 }
 .project-info {
   padding: 1rem;
+}
+.project-info p {
+  margin-top: 1.5rem;
 }
 
 .card-front {
@@ -565,4 +571,19 @@ textarea {
   border-radius: 2rem;
   margin-left: 1rem;
   color: var(--clr-white);
+}
+.language {
+  text-align: end;
+  color: var(--clr-primary-3);
+}
+@media screen and (min-width: 896px) {
+  .project-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .project-card {
+    min-height: 28rem;
+  }
 }
