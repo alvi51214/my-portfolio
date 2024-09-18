@@ -2,7 +2,6 @@ import { Profiler, useState } from "react";
 import "./App.css";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
-import About from "./components/about";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
