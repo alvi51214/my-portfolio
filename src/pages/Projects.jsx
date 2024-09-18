@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../components/context";
 import Loading from "../components/Loading";
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projectImages = {
@@ -27,8 +27,12 @@ const Projects = () => {
   }
   return (
     <>
-      <Navbar />
-      <section className="section">
+      <div className="back-home-container">
+        <Link to="/" className="btn">
+          Back To Home
+        </Link>
+      </div>
+      <section className="projects-section">
         <div className="section-title">
           <h2>my projects</h2>
           <div className="underline"></div>

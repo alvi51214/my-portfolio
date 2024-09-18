@@ -206,6 +206,7 @@ p {
   color: var(--clr-primary-4);
   text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.6);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
 }
 
 .nav-btn {
@@ -236,6 +237,7 @@ p {
   border-radius: 2rem;
   transition: var(--transition);
   cursor: pointer;
+  color: var(--clr-grey-1);
 }
 .show-links li:hover {
   background: var(--clr-primary-8);
@@ -509,6 +511,12 @@ textarea {
   background: var(--clr-primary-6);
 }
 /* projects */
+.projects-section {
+  padding: 3rem;
+}
+.back-home-container {
+  padding: 1rem;
+}
 .project-img {
   height: 15rem;
   object-fit: cover;
@@ -607,4 +615,22 @@ textarea {
   .show-links {
     left: 50%;
   }
+}
+/* css for smooth transition */
+.page-transition {
+  position: relative;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
 }
