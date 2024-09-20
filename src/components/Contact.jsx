@@ -32,8 +32,14 @@ const Contact = () => {
   return (
     <div>
       {isModalOpen && !isSubmitted && (
-        <div className="modal-overlay" onClick={toggleModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div
+          className={`modal-overlay ${isModalOpen ? "show" : ""}`}
+          onClick={toggleModal}
+        >
+          <div
+            className={`modal-content ${isModalOpen ? "show" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className="close-btn" onClick={toggleModal}>
               X
             </button>
@@ -44,7 +50,8 @@ const Contact = () => {
               method="POST"
               data-netlify="true"
               action="/thankyou"
-              onSubmit={handleSubmit} // Handle form submission here
+              onSubmit={handleSubmit}
+              // Handle form submission here
             >
               <input type="hidden" name="form-name" value="contact" />
 
