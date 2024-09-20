@@ -25,6 +25,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleLinkClick = () => {
+    setShowMenu(false); // Close the menu when a link is clicked
+  };
+
   return (
     <nav className="nav">
       <div className="nav-center">
@@ -35,16 +39,31 @@ const Navbar = () => {
           </button>
         </div>
         <ul className={`nav-links ${showMenu ? "show-links" : ""}`}>
-          <ScrollLink to="about" smooth={true} duration={500}>
+          <ScrollLink
+            to="about"
+            smooth={true}
+            duration={500}
+            onClick={handleLinkClick}
+          >
             <li>About</li>
           </ScrollLink>
-          <Link to="/projects">
+          <Link to="/projects" onClick={handleLinkClick}>
             <li>Projects</li>
           </Link>
-          <ScrollLink to="skills" smooth={true} duration={500}>
+          <ScrollLink
+            to="skills"
+            smooth={true}
+            duration={500}
+            onClick={handleLinkClick}
+          >
             <li>Skills</li>
           </ScrollLink>
-          <ScrollLink to="services" smooth={true} duration={500}>
+          <ScrollLink
+            to="services"
+            smooth={true}
+            duration={500}
+            onClick={handleLinkClick}
+          >
             <li>Services</li>
           </ScrollLink>
         </ul>
