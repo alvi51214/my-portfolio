@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";

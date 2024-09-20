@@ -512,7 +512,7 @@ textarea {
 }
 /* projects */
 .projects-section {
-  padding: 3rem;
+  padding: 3rem 0;
 }
 .back-home-container {
   padding: 1rem;
@@ -603,6 +603,10 @@ textarea {
   }
   .banner-content {
     max-width: 21.9rem;
+  }
+  .project-card {
+    min-height: 30rem;
+    margin-bottom: 5rem;
   }
 }
 

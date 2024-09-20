@@ -8,7 +8,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const myRepos = async () => {
     setLoading(true);
@@ -23,8 +23,12 @@ const AppProvider = ({ children }) => {
     myRepos();
   }, []);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
-    <AppContext.Provider value={{ repos, loading }}>
+    <AppContext.Provider value={{ repos, loading, isModalOpen, toggleModal }}>
       {children}
     </AppContext.Provider>
   );
